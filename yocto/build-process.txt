@@ -38,6 +38,9 @@ setenv fdt_file imx6ul-14x14-evk-btwifi.OOB_IRQ.dtb
 saveenv
 boot
 
+## After Boot run the following command ##
+update-rc.d -f hostapd remove
+
 ## Add the following line to /etc/rc.local after 'echo 30000 > /proc/sys/vm/min_free_kbytes' ##
 exec /bin/login -f root
 
