@@ -42,7 +42,7 @@ boot
 exec /bin/login -f root
 
 ## Create /home/root/.profile and add the following line to it ## 
-cd /home/root/pulse-nodejs; node main.js
+cd /home/root/pulse-nodejs; nice --20 node main.js&
 
 ## You now have a system that will auto-login and run the firmware ## 
 
