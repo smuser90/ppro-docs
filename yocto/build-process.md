@@ -13,6 +13,7 @@ dmesg | tail | grep sd
 ## Now make sure it is not mounted on the file system ##
 
 sudo umount /media/alpine/*  
+## may get umount: /media/alpine/*: mountpoint not found which is fine ##
 
 ## Copy the sdcard image to the device ##
 
