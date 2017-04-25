@@ -20,6 +20,7 @@ sudo umount /media/alpine/*
 sudo dd if=fsl-image-machine-test-imx6ulevk.sdcard of=/dev/sdf bs=1M && sync  
 
 ## Remove and replace the sd card to ensure it gets mounted in /media/alpine ##
+This next step loads in the murata image files
 
 cd ~/pulse-pro-yocto/linux-imx  
 
