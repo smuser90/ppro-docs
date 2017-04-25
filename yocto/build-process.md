@@ -37,7 +37,7 @@ sudo cp arch/arm/boot/zImage /media/alpine/Boot\ imx6ul/
 sudo umount /media/alpine/*  
 
 ## To terminal into the imx board, plug the USB cable into your laptop, run " screen /dev/tty.S  115200 " and hit tab to fill the rest of the name in ## 
-Note that you will need a special driver- http://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
+(Note that you will need a special driver- http://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
 
 ## Boot the imx6ul evk and interrupt u-boot by pressing any key ##
 ## Change the device tree blob to be for OOB Interrupts ##
@@ -53,6 +53,7 @@ update-rc.d -f hostapd remove
 
 ## Add the following line to /etc/rc.local after 'echo 30000 > /proc/sys/vm/min_free_kbytes' ##
 exec /bin/login -f root  
+(to edit the rclocal file i have to call vi /etc/rc.local hit “a” to be able to edit. after editing hit “esc, : , w+q”)
 
 ## Create /home/root/.profile and add the following line to it ##
 cd /home/root/pulse-nodejs; nice --20 node main.js&  
