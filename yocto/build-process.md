@@ -48,7 +48,7 @@ saveenv
 
 boot  
 ## (it will result in failutres for a little while, need to let them finish) ## 
-## After Boot run the following command 
+## After Boot, login with "root" and run the following command 
 update-rc.d -f hostapd remove  
 
 ## Add the following line to /etc/rc.local after 'echo 30000 > /proc/sys/vm/min_free_kbytes' ##
