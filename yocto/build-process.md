@@ -51,6 +51,14 @@ update-rc.d -f hostapd remove
 ## Add the following line to /etc/rc.local after 'echo 30000 > /proc/sys/vm/min_free_kbytes' ##
 exec /bin/login -f root  
 
+## Connect ethernet cable to port and grab an IP address with the following command ## 
+
+dhclient eth0
+
+## Pull firmware from github ## 
+
+git pull https://github.com/smuser90/pulse-nodejs
+
 ## Create /home/root/.profile and add the following line to it ##
 cd /home/root/pulse-nodejs; nice --20 node main.js&  
 
