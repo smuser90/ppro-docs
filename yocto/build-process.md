@@ -36,6 +36,9 @@ sudo cp arch/arm/boot/zImage /media/alpine/Boot\ imx6ul/
 ## That's it! The sdcard is now prepared for booting. Now unmount it ##
 sudo umount /media/alpine/*  
 
+## To terminal into the imx board, plug the USB cable into your laptop, run " screen /dev/tty.S  115200 " and hit tab to fill the rest of the name in ## 
+Note that you will need a special driver- http://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
+
 ## Boot the imx6ul evk and interrupt u-boot by pressing any key ##
 ## Change the device tree blob to be for OOB Interrupts ##
 
@@ -44,20 +47,12 @@ setenv fdt_file imx6ul-14x14-evk-btwifi.OOB_IRQ.dtb
 saveenv  
 
 boot  
-
-## After Boot run the following command ##
+## (it will result in failutres for a little while, need to let them finish) ## 
+## After Boot run the following command 
 update-rc.d -f hostapd remove  
 
 ## Add the following line to /etc/rc.local after 'echo 30000 > /proc/sys/vm/min_free_kbytes' ##
 exec /bin/login -f root  
-
-## Connect ethernet cable to port and grab an IP address with the following command ## 
-
-dhclient eth0
-
-## Pull firmware from github ## 
-
-git pull https://github.com/smuser90/pulse-nodejs
 
 ## Create /home/root/.profile and add the following line to it ##
 cd /home/root/pulse-nodejs; nice --20 node main.js&  
