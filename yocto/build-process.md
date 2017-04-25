@@ -61,6 +61,7 @@ exec /bin/login -f root
 
 ## Pull firmware from github ## 
  
+ cd /home/root
  git clone https://github.com/smuser90/pulse-nodejs.git
  
 ## Create /home/root/.profile and add the following line to it ##
