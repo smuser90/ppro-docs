@@ -55,6 +55,14 @@ update-rc.d -f hostapd remove
 exec /bin/login -f root  
 (to edit the rclocal file i have to call vi /etc/rc.local hit “a” to be able to edit. after editing hit “esc, : , w+q”)
 
+## Connect ethernet cable to port and grab an IP address with the following command ## 
+ 
+ dhclient eth0
+
+## Pull firmware from github ## 
+ 
+ git pull https://github.com/smuser90/pulse-nodejs
+ 
 ## Create /home/root/.profile and add the following line to it ##
 cd /home/root/pulse-nodejs; nice --20 node main.js&  
 
