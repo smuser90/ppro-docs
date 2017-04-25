@@ -1,4 +1,4 @@
-cd ~/Documents/pulse-pro-yocto/build-fb01  
+cd ~/pulse-pro-yocto/build-fb01  
 
 bitbake fsl-image-machine-test  
 
