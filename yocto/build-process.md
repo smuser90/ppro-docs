@@ -66,9 +66,6 @@ exec /bin/login -f root
 ## Create /home/root/.profile and add the following line to it ##
 cd /home/root/pulse-nodejs; nice --20 node main.js&  
 
-## You now have a system that will auto-login and run the firmware ##
-
-## As a final step, git pull the firmware ##
-cd /home/root; git pull https://github.com/smuser90/pulse-nodejs.git  
+## You now have a system that will auto-login and run the firmware ## 
 
 ## reboot and everything should 'just work' ##
