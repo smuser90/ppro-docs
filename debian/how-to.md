@@ -13,3 +13,6 @@ https://ubuntuforums.org/showthread.php?t=910717
 ## Run `dpkg-deb --build libgphoto-debian` ##
 
 ## Copy new .deb file over to firmware repo ## 
+cd pulse-nodejs/lib
+this folder will have the old .deb file, 
+move over the new one that's at the Documents level
