@@ -1,3 +1,8 @@
+## Note: Dual AP-STA mode is not supported in the bcmdhd driver as of yet ## 
+## Check this thread for updates ## 
+## https://community.nxp.com/message/870975 ## 
+
+
 cd ~/pulse-pro-yocto/build-fb01  
 
 bitbake fsl-image-machine-test  
